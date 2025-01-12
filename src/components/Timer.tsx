@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Button, Typography, Box } from '@mui/material';
+import './Timer.css';
 
 interface TimerProps {
   onStart?: () => void;
@@ -63,9 +64,9 @@ function Timer({ onStart, onEnd, onPause, onResume }: TimerProps) {
   };
 
   return (
-    <Box sx={{ textAlign: 'center' }}>
+    <div className="timer-container">
       {hasStarted && (
-        <Typography variant="h1" sx={{ mb: 4, fontFamily: 'monospace' }}>
+        <Typography variant="h1" className="timer-display">
           {formatTime(time)}
         </Typography>
       )}
@@ -75,20 +76,20 @@ function Timer({ onStart, onEnd, onPause, onResume }: TimerProps) {
           variant="contained" 
           size="large" 
           onClick={handleStart}
-          sx={{ fontSize: '1.2rem', px: 4, py: 1.5 }}
+          className="timer-button"
         >
           Start Session
         </Button>
       )}
       
       {isRunning && (
-        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+        <div className="button-group">
           <Button 
             variant="contained" 
             color="secondary" 
             size="large" 
             onClick={handlePause}
-            sx={{ fontSize: '1.2rem', px: 4, py: 1.5 }}
+            className="timer-button"
           >
             Pause
           </Button>
@@ -97,21 +98,21 @@ function Timer({ onStart, onEnd, onPause, onResume }: TimerProps) {
             color="error" 
             size="large" 
             onClick={handleEnd}
-            sx={{ fontSize: '1.2rem', px: 4, py: 1.5 }}
+            className="timer-button"
           >
             End Session
           </Button>
-        </Box>
+        </div>
       )}
       
       {!isRunning && hasStarted && (
-        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center' }}>
+        <div className="button-group">
           <Button 
             variant="contained" 
             color="primary" 
             size="large" 
             onClick={handleResume}
-            sx={{ fontSize: '1.2rem', px: 4, py: 1.5 }}
+            className="timer-button"
           >
             Resume
           </Button>
@@ -120,13 +121,13 @@ function Timer({ onStart, onEnd, onPause, onResume }: TimerProps) {
             color="error" 
             size="large" 
             onClick={handleEnd}
-            sx={{ fontSize: '1.2rem', px: 4, py: 1.5 }}
+            className="timer-button"
           >
             End Session
           </Button>
-        </Box>
+        </div>
       )}
-    </Box>
+    </div>
   );
 }
 

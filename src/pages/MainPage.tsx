@@ -1,10 +1,11 @@
-import { Container, Box } from '@mui/material';
+import { Container } from '@mui/material';
 import { useState } from 'react';
 import Timer from '../components/Timer';
 import Transcriber from '../components/Transcriber';
 import AudioListener from '../components/AudioListener';
 import { useMockAudioStream } from '../services/mockAudioService';
 import { useAudio } from '../contexts/AudioContext';
+import './MainPage.css';
 
 function MainPage() {
   const [sessionStarted, setSessionStarted] = useState(false);
@@ -35,14 +36,7 @@ function MainPage() {
 
   return (
     <Container maxWidth="lg">
-      <Box 
-        sx={{ 
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: 'calc(100vh - 120px)',
-          pt: 4,
-        }}
-      >
+      <div className="main-container">
         <Timer 
           onStart={handleSessionStart} 
           onEnd={handleSessionEnd}
@@ -55,7 +49,7 @@ function MainPage() {
             <AudioListener isSessionActive={sessionStarted} />
           </>
         )}
-      </Box>
+      </div>
     </Container>
   );
 }

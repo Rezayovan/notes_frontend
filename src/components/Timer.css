@@ -1,0 +1,19 @@
+.timer-container {
+  text-align: center;
+}
+
+.timer-display {
+  margin-bottom: 2rem;
+  font-family: monospace;
+}
+
+.timer-button {
+  font-size: 1.2rem !important;
+  padding: 0.75rem 2rem !important;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+} 
