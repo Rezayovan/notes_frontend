@@ -19,7 +19,7 @@ jobs:
           node-version: '20'
           cache: 'yarn'
 
-      - name: Install dependencies
+      - name: yoink
         run: yarn install --frozen-lockfile
 
       - name: Build
