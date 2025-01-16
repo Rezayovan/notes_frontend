@@ -1,6 +1,6 @@
 .transcriber-container {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .transcriber-paper {
@@ -9,6 +9,8 @@
   min-height: 50vh;
   display: flex;
   flex-direction: column;
+  border-radius: 16px !important;
+  overflow: hidden;
 }
 
 .transcriber-textfield {
@@ -17,6 +19,7 @@
 
 .transcriber-textfield .MuiOutlinedInput-root {
   height: 100%;
+  border-radius: 16px;
 }
 
 .transcriber-textfield .MuiOutlinedInput-root textarea {

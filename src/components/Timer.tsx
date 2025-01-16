@@ -66,7 +66,7 @@ function Timer({ onStart, onEnd, onPause, onResume }: TimerProps) {
   return (
     <div className="timer-container">
       {hasStarted && (
-        <Typography variant="h1" className="timer-display">
+        <Typography variant="h2" className="timer-display">
           {formatTime(time)}
         </Typography>
       )}
