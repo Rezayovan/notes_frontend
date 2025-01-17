@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button, Typography, Box } from '@mui/material';
+import { Button, Typography, } from '@mui/material';
 import './Timer.css';
 
 interface TimerProps {

@@ -1,4 +1,4 @@
-import { Box, Paper, TextField } from '@mui/material';
+import { Paper, TextField } from '@mui/material';
 import { useAudio } from '../contexts/AudioContext';
 import { useEffect, useRef } from 'react';
 import './Transcriber.css';
